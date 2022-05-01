@@ -13,7 +13,7 @@ resource "aws_instance" "ourfirst" {
   ami           = "ami-0447a12f28fddb066"
   instance_type = "t2.micro"
 lifecycle {
-  prevent_destroy = true
+  prevent_destroy = true (to save the instance from destroying)  or false (to enable destroying ) 
   ignore_changes = ["ami",]
   }
 
